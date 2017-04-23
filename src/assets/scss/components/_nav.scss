@@ -4,6 +4,10 @@
 
   & a {
     @include bg-light-color ($dark-color);
+    transition: background-color $duration;
+    &:hover {
+      transition: background-color $duration;
+    }
   }
 
   & ul {
@@ -58,8 +62,10 @@
         border: none;
         & a {
           background-color: mix($dark-color, $main-color, 92%);
+          transition: $duration;
           &:hover {
             background-color: $sub-color;
+            transition: $duration;
           }
         }
       }
