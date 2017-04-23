@@ -1,5 +1,33 @@
 $duration: .3s;
-$orange: #FF9800;
+$main-color: #ffb100;
+$sub-color: mix($main-color, $black, 75%);
+$dark-color: mix($main-color, $black, 15%);
+
+@mixin bg-dark-color ($color) {
+  background-color: $color;
+  transition: .25s ease-out;
+
+  &.hover-effect:hover {
+    background-color: mix($color, $black, 30%);
+    transition: .25s ease-in;
+  }
+}
+
+@mixin bg-light-color ($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: mix($color, $main-color, 92%);
+  }
+}
+
+.bg-main-color {
+  @include bg-dark-color ($main-color);
+}
+
+.bg-sub-color {
+  @include bg-light-color ($dark-color);
+}
 
 li {
   line-height: 1rem;

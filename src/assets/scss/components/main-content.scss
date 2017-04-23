@@ -2,6 +2,35 @@
   margin: 4rem 0;
 }
 
+// Стили заголовка товаров
+
+.product-header {
+  position: relative;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid $black;
+
+  &__line {
+    content: "";
+    bottom: 8px;
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-left: 100px;
+    line-height: 0.8;
+    display: inline-block;
+    background-color: $white;
+    padding: 1rem;
+    border: $black solid 1px;
+    border-bottom: none;
+    margin-bottom: -1px;
+  }
+}
+
+// Стили карт товара
+
 .card{
   position: relative;
   border: none;
@@ -47,7 +76,6 @@
 }
 
 .card__header {
-	height: 301px;
 	overflow: hidden;
 	background-color: #000;
 	transition: height $duration;
@@ -119,8 +147,8 @@
 }
 
 .card__content__discover {
-  color: $orange;
-  text-align: center;
+  color: $main-color;
+  text-align: right;
   margin: 0;
 
   .card:hover & {
@@ -132,14 +160,14 @@
   display: none;
 
   text-align: center;
-  background-color: $orange;
+  background-color: $main-color;
   color: $white;
   width: 100%;
   padding: .6rem;
 
   &:hover {
     color: $white;
-    background-color: desaturate( $orange, 20% );
+    background-color: desaturate( $main-color, 20% );
 
   }
 

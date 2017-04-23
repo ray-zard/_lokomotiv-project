@@ -1,3 +1,68 @@
 .top-bar {
+  background-color: $dark-color;
   padding: 0;
+
+  & a {
+    @include bg-light-color ($dark-color);
+  }
+
+  & ul {
+    background-color: $dark-color;
+  }
+
+  &__left {
+    float: left;
+
+    &__logo {
+      display: block;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 1;
+
+      padding: 1rem;
+
+      small {
+        color: $main-color;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__right {
+    float: right;
+
+    & .menu {
+      list-style-type: none;
+      margin: 0;
+
+      & li {
+        display: inline-block;
+
+        font-weight: bold;
+        text-transform: uppercase;
+
+        margin: 0;
+
+        & a {
+          display: block;
+          color: $white;
+          padding: 1.27rem;
+        }
+      }
+
+      & .menu {
+        border: none;
+        & a {
+          background-color: mix($dark-color, $main-color, 92%);
+          &:hover {
+            background-color: $sub-color;
+          }
+        }
+      }
+    }
+  }
 }
