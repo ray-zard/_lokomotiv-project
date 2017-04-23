@@ -5,28 +5,8 @@
 // Стили заголовка товаров
 
 .product-header {
-  position: relative;
-  margin-bottom: 4rem;
-  border-bottom: 1px solid $black;
-
-  &__line {
-    content: "";
-    bottom: 8px;
-    display: block;
-    width: 100%;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    margin-left: 100px;
-    line-height: 0.8;
-    display: inline-block;
-    background-color: $white;
-    padding: 1rem;
-    border: $black solid 1px;
-    border-bottom: none;
-    margin-bottom: -1px;
-  }
+  border-bottom: 2px solid $main-color;
+  margin-bottom: 2rem;
 }
 
 // Стили карт товара
@@ -50,11 +30,10 @@
   }
 }
 
-.card__p-list{
+.card__content__p-list{
   position: absolute;
   top: -36px;
   left: 0;
-
   padding: 10px;
 
   color: #FFF;
@@ -62,9 +41,10 @@
   line-height: 13px;
   font-weight: bold;
 
-  background-color: $black;
+  background-color: $dark-color;
 
   &__from, &__ton {
+    color: $sub-color;
     font-size: 9px;
     text-transform: uppercase;
   }
@@ -78,29 +58,31 @@
 .card__header {
 	overflow: hidden;
 	background-color: #000;
+  height: 300px;
 	transition: height $duration;
 
 	img {
 		display: block;
 		opacity: 1;
-		transition: opacity $duration, transform $duration;
 		transform: scale(1);
+    transition: opacity $duration, transform $duration;
 	}
 
 	.card:hover & img {
 		opacity: 0.6;
-		transform: scale(1.2);
+		transform: scale(1.15);
+    transition: opacity $duration, transform $duration;
 	}
 
 	.card:hover & {
 		height: 405px - 300px;
+    transition: height $duration;
 	}
 }
 
 .card__content {
   position: relative;
   height: 104px;
-  transition: height $duration;
 
   .card:hover & {
     height: 100%;
@@ -109,16 +91,20 @@
 
 .card__content__wrapper {
   width: 100%;
+  height: 100%;
   padding: 1rem;
 
+  transition: $duration;
+
   .card:hover & {
+    height: auto;
     position: absolute;
     right: 0;
     left: 0;
 
     background-color: $white;
-
     box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+    transition: $duration;
   }
 }
 

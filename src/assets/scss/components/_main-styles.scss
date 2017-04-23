@@ -3,6 +3,10 @@ $main-color: #ffb100;
 $sub-color: mix($main-color, $black, 75%);
 $dark-color: mix($main-color, $black, 15%);
 
+body {
+  text-rendering: optimizeLegibility;
+}
+
 @mixin bg-dark-color ($color) {
   background-color: $color;
   transition: .25s ease-out;
