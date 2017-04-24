@@ -1,24 +1,28 @@
-.marketing-hero.home-large-hero {
+.hero {
   background: url(../img/pesok_tech.jpg) center left;
   background-color: $dark-gray;
   padding-bottom: 128px;
   padding-top: 128px;
-}
 
-.marketing-hero {
   & a, h1, h2, h3, h4 {
     font-weight: bold;
     color: $white;
   }
-}
 
-.marketing-hero h1 {
-  text-transform: uppercase;
-}
+  & h1 {
+    text-transform: uppercase;
 
-.marketing-hero h1 {
-  span {
-    padding: 0.4rem 1rem;
-    line-height: 5.1rem;
+    span {
+      padding: 0.4rem 1rem;
+      line-height: 5.1rem;
+    }
+  }
+
+  & h3 {
+    span {
+      line-height: 1.6;
+      padding: 0.3rem 1rem;
+      background-color: $dark-color;
+    }
   }
 }

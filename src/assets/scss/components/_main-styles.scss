@@ -3,17 +3,20 @@ $main-color: #ffb100;
 $sub-color: mix($main-color, $black, 75%);
 $dark-color: mix($main-color, $black, 15%);
 
+$body-font-color: $dark-color;
+
 body {
+  color: $dark-color;
   text-rendering: optimizeLegibility;
 }
 
 @mixin bg-dark-color ($color) {
   background-color: $color;
-  transition: .25s ease-out;
+  transition: background-color .25s ease-out;
 
   &.hover-effect:hover {
     background-color: mix($color, $black, 30%);
-    transition: .25s ease-in;
+    transition: background-color .25s ease-in;
   }
 }
 
