@@ -60,11 +60,13 @@
 
       & .menu {
         border: none;
+        background-color: $sub-color;
         & a {
-          background-color: mix($dark-color, $main-color, 92%);
+          background-color: $main-color;
           transition: $duration;
           &:hover {
             background-color: $sub-color;
+            // background-color: mix($dark-color, $main-color, 92%);
             transition: $duration;
           }
         }
