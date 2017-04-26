@@ -8,6 +8,11 @@
     &:hover {
       transition: background-color $duration;
     }
+    &.nav-phone {
+      line-height: 1;
+      font-size: 1.6rem;
+      background-color: $sub-color;
+    }
   }
 
   & ul {
@@ -54,7 +59,7 @@
         & a {
           display: block;
           color: $white;
-          padding: 1.27rem;
+          padding: 1rem;
         }
       }
 
@@ -62,10 +67,10 @@
         border: none;
         background-color: $sub-color;
         & a {
-          background-color: $main-color;
+          background-color: $sub-color;
           transition: $duration;
           &:hover {
-            background-color: $sub-color;
+            background-color: $main-color;
             // background-color: mix($dark-color, $main-color, 92%);
             transition: $duration;
           }
