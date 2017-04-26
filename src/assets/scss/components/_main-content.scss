@@ -14,6 +14,7 @@
 .card{
   position: relative;
   border: none;
+  color: $dark-color;
   display: block;
   height: 405px;
   background-color: #fff;
@@ -27,7 +28,7 @@
   text-decoration: none;
 
   & h4 {
-    color: $black;
+    color: $dark-color;
   }
 }
 
@@ -45,7 +46,7 @@
   background-color: $dark-color;
 
   &__from, &__ton {
-    color: $sub-color;
+    color: $main-color;
     font-size: 9px;
     text-transform: uppercase;
   }
@@ -100,6 +101,7 @@
   transition: $duration;
 
   .card:hover & {
+    min-height: 300px;
     height: auto;
     position: absolute;
     right: 0;
@@ -151,6 +153,11 @@
 
 .card__content__bottom {
   display: none;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -43px;
 
   text-align: center;
   background-color: $main-color;
